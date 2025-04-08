@@ -1,5 +1,5 @@
 function countVowels(str) {
-    let vowels = "aeiouAEIOU";
+    const vowels = "aeiouAEIOU";
     let count = 0;
 
     for (let i = 0; i < str.length; i++) {
@@ -12,4 +12,4 @@ function countVowels(str) {
 }
 
 let sentence = "Merhabalar Otobotlar";
-console.log("Sesli harf sayısı:", countVowels(sentence));
+console.log("Cümlenizdeki Sesli harf sayısı:", countVowels(sentence));
