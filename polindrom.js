@@ -1,5 +1,10 @@
 function isPalindrome(str) {
+
     
+    str = str.replace(/[.,:;!?'"()\[\]{}<>-]/g, "");
+
+    const regex = /[.,:;!?'"()\[\]{}<>-]/;
+
     let cleanedStr = "";
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== " ") {
@@ -7,13 +12,11 @@ function isPalindrome(str) {
         }
     }
 
-   
     let reversed = "";
     for (let i = cleanedStr.length - 1; i >= 0; i--) {
         reversed += cleanedStr[i];  
     }
 
-    
     if (cleanedStr === reversed) {
         return "True";
     } else {
@@ -22,4 +25,4 @@ function isPalindrome(str) {
 }
 
 const word = "no lemon no melon";
-console.log(isPalindrome(word));  
+console.log(isPalindrome(word)); 

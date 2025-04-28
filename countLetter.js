@@ -15,4 +15,4 @@ function countLetter(word,letter) {
 
 let word = "Merhabalar";
 let letter = "a";  
-console.log("Harfin sayısı:", countLetter(word, letter));
+console.log("Harfin sayısı:", countLetter(word,letter));
