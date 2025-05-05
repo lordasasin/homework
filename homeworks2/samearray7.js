@@ -1,17 +1,21 @@
-let arr1 = [24, 42, 12, 21, 51];
-let arr2 = [24, 42, 12, 21, 53];
-let arr3 = [];
-
-for (let i = 0; i < 4; i++){
 
 
-    arr3[i] = 0;
-
-    if (arr1[i] === arr2[i]){
-
-        arr3[i] += arr1[i];
-        
+function array(arr1 , arr2){
+    let arr3 = [];
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+        if (arr1[i] === arr2[j]) {
+            arr3.push(arr1[i]);
+            arr2[j] = null;
+            break;
+        }
     }
 }
 
-console.log(arr3);
+
+
+
+
+console.log(arr3);}
+
+array([24, 42, 12, 21, 51] , [24, 42, 12, 21, 52])

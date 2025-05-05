@@ -1,26 +1,25 @@
 function firsletterbig(str) {
-    let sonuc = '';
-    let yeniKelime = true;
+    let result = '';
+    let newWord = true;
 
     for (let i = 0; i < str.length; i++) {
-        let karakter = str[i];
+        let char = str[i];
 
-        if (karakter === ' ') {
-            yeniKelime = true;
-            sonuc += karakter;
+        if (char === ' ') {
+            newWord = true;
+            result += char;
         } else {
-            if (yeniKelime) {
-                karakter = karakter.toUpperCase();
+            if (newWord) {
+                char = char.toUpperCase();
             }
-            yeniKelime = false;
-            sonuc += karakter;
+            newWord = false;
+            result+= char;
         }
     }
 
-    return sonuc;
+    return result;
 }
 
 let str = "merhabalar benim adım yusuf";
-let sonuc = firsletterbig(str);
+console.log(firsletterbig(str));
 
-console.log(sonuc);

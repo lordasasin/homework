@@ -1,22 +1,20 @@
-function parantezcontroler(str) {
-    let sayac = 0;
-  
-    for (let i = 0; i < str.length; i++) {
-      let karakter = str[i];
-  
-      if (karakter === '(') {
-        sayac++;
-      } else if (karakter === ')') {
-        sayac--;
-        if (sayac < 0) {
-          return false;
-        }
+function parenthesisChecker(str) {
+  let counter = 0;
+
+  for (let i = 0; i < str.length; i++) {
+      let character = str[i];
+
+      if (character === '(') {
+          counter++;
+      } else if (character === ')') {
+          counter--;
+          if (counter < 0) {
+              return false;
+          }
       }
-    }
-  
-    return sayac === 0;
   }
-  
-  console.log(parantezcontroler("(Merhablar")); 
-   
-  
+
+  return counter === 0;
+}
+
+console.log(parenthesisChecker("(Merhablar"));

@@ -1,8 +1,11 @@
-let sayi = 5;
+function faktoriyel(number){
+
 let faktoriyel = 1;
 
 
-for(i = 1; i <= sayi; i++){
+for(i = 1; i <= number; i++){
     faktoriyel *= i;
 }
-console.log(faktoriyel);
+console.log(faktoriyel);}
+
+faktoriyel(5);

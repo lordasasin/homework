@@ -1,7 +1,5 @@
 function Anagram(str1, str2) {
-    str1 = str1.replace(/[.,:;!?'"()\[\]{}<>-]/g, "");
-    str2 = str2.replace(/[.,:;!?'"()\[\]{}<>-]/g, "");
-
+    
     let cleanedStr1 = "";
     for (let i = 0; i < str1.length; i++) {
         if (str1[i] !== " ") {
@@ -22,26 +20,30 @@ function Anagram(str1, str2) {
     if (cleanedStr1.length !== cleanedStr2.length) {
         return false;
     }
-
-    let count = {};
-
+    else{
+    let sayac = 0;
     for (let i = 0; i < cleanedStr1.length; i++) {
-        let char = cleanedStr1[i];
-        count[char] = (count[char] || 0) + 1;
-    }
-
-    for (let i = 0; i < cleanedStr2.length; i++) {
-        let char = cleanedStr2[i];
-        if (!count[char]) {
-            return false;
+        for (let j = 0; j < cleanedStr2.length; j++) {
+            
+            if (cleanedStr1[i] === cleanedStr2[j]) {
+                sayac += 1 ;
+            
+            }
+            
+            
         }
-        count[char]--;
+       
     }
-
-    return true;
+    if(sayac === cleanedStr1.length){   
+        return true ;
+       }
+       else{
+           return false ;
+            }
+    
 }
-
-const str1 = "no";
-const str2 = "on";
+}
+let str1 = "sfu";
+let str2 = "fus";
 
 console.log(Anagram(str1, str2));

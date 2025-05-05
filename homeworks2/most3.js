@@ -1,24 +1,24 @@
 function most(str) {
-    let harfSayilari = {};
-    let maxHarf = '';
-    let maxSayi = 0;
-  
-    for (let i = 0; i < str.length; i++) {
-      let harf = str[i];
-  
-      if (harfSayilari[harf] === undefined) {
-        harfSayilari[harf] = 1;
+  let letterCount = {};
+  let maxLetter = '';
+  let maxCount = 0;
+
+  for (let i = 0; i < str.length; i++) {
+      let letter = str[i];
+
+      if (letterCount[letter] === undefined) {
+          letterCount[letter] = 1;
       } else {
-        harfSayilari[harf]++;
+          letterCount[letter]++;
       }
-  
-      if (harfSayilari[harf] > maxSayi) {
-        maxHarf = harf;
-        maxSayi = harfSayilari[harf];
+
+      if (letterCount[letter] > maxCount) {
+          maxLetter = letter;
+          maxCount = letterCount[letter];
       }
-    }
-  
-    return maxHarf;
   }
-  
-  console.log(most("Merhaba benim adım yasaf"));
+
+  return maxLetter;
+}
+
+console.log(most("Merhaba benim adım yasaf"));

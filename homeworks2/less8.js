@@ -1,24 +1,24 @@
-function lesswords(dizi) {
-  let sayac = {};
-  let sonuc = '';
-  
-  for (let i = 0; i < dizi.length; i++) {
-    let eleman = dizi[i];
-    if (sayac[eleman] === undefined) {
-      sayac[eleman] = 1;
+function lessWords(arr) {
+  let wordCount = {};
+  let result = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    if (wordCount[element] === undefined) {
+      wordCount[element] = 1;
     } else {
-      sayac[eleman]++;
+      wordCount[element]++;
     }
   }
 
-  for (let i = 0; i < dizi.length; i++) {
-    let eleman = dizi[i];
-    if (sayac[eleman] === 1) {
-      sonuc += eleman;
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    if (wordCount[element] === 1) {
+      result += element;
     }
   }
 
-  return sonuc;
+  return result;
 }
 
-console.log(lesswords(['a', 'b', 'c', 'a', 'd', 'e', 'b']));
+console.log(lessWords("Merhabalar Benim Adım"));
